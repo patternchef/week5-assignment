@@ -19,7 +19,7 @@ class Detail extends Component {
     };
 
     componentDidMount() {
-        const apiUrl = 'https://swapi.dev/api/people/'+this.props.id;
+        const apiUrl = 'https://swapi.dev/api/people/'+this.props.id+'/';
         fetch(apiUrl)
             .then((response) => response.json())
             .then((character) => this.setState({character, loading: false}))
